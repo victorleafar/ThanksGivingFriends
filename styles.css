@@ -1,0 +1,172 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y configuración de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Diseño de la tarjeta personalizada */
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* Animación en hover */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del saludo */
+.greeting {
+    color: #ff9f00;  /* Naranja */
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilos del mensaje principal */
+.message {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Estilos del botón */
+.reveal-button {
+    background-color: #ff9f00;  /* Naranja */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.reveal-button:hover {
+    background-color: #e87c00;  /* Naranja más oscuro */
+}
+
+/* Estilos del mensaje oculto */
+.hidden-message {
+    margin-top: 20px;
+    display: none;
+    color: #555;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Firma de Victor */
+.signature {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e34b6a;
+    margin-top: 15px;
+}
+
+/* Estilos del header (foto y saludo) */
+.header {
+    margin-bottom: 20px;
+    text-align: center; /* Centra el contenido del header */
+}
+
+.photo {
+    width: 120px; /* Tamaño ajustado de la foto */
+    height: 120px; /* Tamaño ajustado de la foto */
+    border-radius: 50%; /* Hace que la foto sea un círculo */
+    object-fit: cover; /* Asegura que la foto se recorte bien si no es cuadrada */
+    border: 5px solid #ff9f00; /* Un borde suave y armonioso */
+    margin-bottom: 15px; /* Espacio debajo de la foto */
+}
+
+/* Cuando se revela el mensaje, oculta la tarjeta original */
+.card.revealed .header,
+.card.revealed .message,
+.card.revealed .reveal-button {
+    display: none;
+}
+
+/* Animaciones de aparición */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo para el botón de volver */
+.back-button {
+    background-color: #ff9f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #e87c00;
+}
+/* Botones de selección de idioma */
+.language-selection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.language-button {
+    background-color: #ff9f00;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-button:hover {
+    background-color: #e87c00;
+}
+
+/* Oculta la selección de idioma al continuar */
+.hidden {
+    display: none;
+}
