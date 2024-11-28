@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Acción de Gracias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Selección de idioma -->
+        <div class="language-selection" id="languageSelection">
+            <h1>Seleccione su idioma / Select your language / Selecione seu idioma</h1>
+            <button class="language-button" onclick="selectLanguage('es')">Español</button>
+            <button class="language-button" onclick="selectLanguage('en')">English</button>
+            <button class="language-button" onclick="selectLanguage('pt')">Português</button>
+        </div>
+
+        <!-- Tarjeta principal -->
+        <div class="card" id="card" style="display: none;">
+            <div class="header" id="header">
+                <img src="https://media.istockphoto.com/id/1418368177/pt/vetorial/happy-thanksgiving-celebration-template-hand-drawn-cartoon-flat-illustration-with-turkey.jpg?s=612x612&w=0&k=20&c=dufQAlP4qOlae9aNEv93fsM90b5g7EIwM2g5Ql7I_2g=" alt="Imagen" class="photo">
+                <h1 class="greeting" id="greeting"></h1>
+            </div>
+            <p class="message" id="message"></p>
+            <button class="reveal-button" onclick="revealMessage()">Ver más / See more / Veja mais</button>
+            <div class="hidden-message" id="hiddenMessage">
+                <p id="hiddenText"></p>
+                <p class="signature" id="signature"></p>
+                <button class="back-button" onclick="goBack()">Volver / Back / Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
